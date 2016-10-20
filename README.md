@@ -40,9 +40,12 @@ First of all, you will need to create an IAM role with the following permissions
     ]
 }
 ```
-Then zip the files, create the lambda function and upload them.
+Then zip the files, create the lambda function and upload them. It should look something like this:
+![Lambda function configuration](https://cc-public-docs.s3.amazonaws.com/lambda-function.png "Lambda function configuration")
 
 Create a Cloudwatch Event to fire off the job, I run mine every night at 3am: `0 3 * * ? *`
+![CloudWatch Event rules](https://cc-public-docs.s3.amazonaws.com/cloudwatch-event-rules.png "CloudWatch Event rules")
+
 Please note that you need to specify how long it should keep the snapshots, example if you want to keep them for 30 days.
 ```json
 {"agelimit": 30}
