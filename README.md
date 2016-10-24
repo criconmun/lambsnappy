@@ -29,6 +29,7 @@ First of all, you will need to create an IAM role with the following permissions
             "Effect": "Allow",
             "Action": [
                 "ec2:CreateSnapshot",
+                "ec2:DeleteSnapshot",
                 "ec2:ModifySnapshotAttribute",
                 "ec2:ResetSnapshotAttribute",
                 "ec2:CreateTags"
